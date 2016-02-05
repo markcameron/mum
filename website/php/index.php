@@ -34,26 +34,30 @@ function sendContactForm($formData, $config){
 
     if ($validated === true) {
 
+      $emails = explode(';', $config['sender_email']);
         $transport = getMailType($config);
 
         $body = createMailBody('mail-templates/new-contact.html', $formData);
         $body = createMailBody('mail-templates/new-contact.html', $formData);
-        $mailer = Swift_Mailer::newInstance($transport);
 
-        // Create a message
-        $message = Swift_Message::newInstance($config['contact_form_subject'])
+        foreach ($emails as $email) {
+          $mailer = Swift_Mailer::newInstance($transport);
+
+          // Create a message
+          $message = Swift_Message::newInstance($config['contact_form_subject'])
             ->setFrom(array($formData['email'] => $formData['name']))
-            ->setTo(array($config['sender_email'] => $config['sender_name']))
+            ->setTo(array($email => $config['sender_name']))
             ->setBody($body, 'text/html');
 
-        // Send the message
-        if ($mailer->send($message)) {
+          // Send the message
+          if ($mailer->send($message)) {
             $result = array('result' => 'success', 'msg' => array('Success! Your contact request has been send.'));
-            return json_encode($result);
-        } else {
+          }
+          else {
             $result = array('result' => 'error', 'msg' => 'Mail can not send! Check mail configs.');
-            return json_encode($result);
+          }
         }
+        return json_encode($result);
     } else {
         $result = array('result' => 'error', 'msg' => $validated);
         return json_encode($result);

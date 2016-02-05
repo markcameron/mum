@@ -6,8 +6,8 @@
 
     // Location Address
     //-------------------------------------------------------------------------------
-    var companyName = 'Accomodation Landing Page';
-    var address = '144 Victoria Rd, Woodstock, Cape Town 7915 South Africa'; // Enter your Address
+    var companyName = 'Comme des Grands';
+    var address = 'Grand\'Rue 24, 1296 Coppet, Suisse';
 
 
     // Navigation Close on Click

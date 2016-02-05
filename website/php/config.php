@@ -2,15 +2,15 @@
 
 return array(
     // Mail Address and Name
-    'sender_email'   => 'mail@themeinjection.com',
-    'sender_name'    => 'Themeinjection',
+    'sender_email'   => getenv('CONTACT_EMAILS'),
+    'sender_name'    => 'Vetements Enfants',
 
     // Mail Config
-    'mail_type'     => 'mail', // smtp or mail - mail is the php mail function
-    'smtp_server'   => 'smtp.server.com',
+    'mail_type'     => 'smtp', // smtp or mail - mail is the php mail function
+    'smtp_server'   => 'smtp.mailgun.org',
     'smtp_port'     => '25',
-    'smtp_user'     => 'username',
-    'smtp_password' => 'xxxxxxxxxxx',
+    'smtp_user'     => 'postmaster@sandboxae9f67ada0fb4464a39aa95ca3844d8f.mailgun.org',
+    'smtp_password' => getenv('MAILGUN_PASSWORD'),
 
     // Mail Subjects
     'contact_form_subject' => 'New message form website',

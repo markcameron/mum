@@ -179,7 +179,10 @@ h6 {
   z-index: 15;
 }
 .top-navbar .navbar-brand {
-  margin-top: 6px;
+  font-family: 'Indie Flower', cursive;
+  font-size:4em;
+  padding:35px 15px;
+  color:#de2e5b;
 }
 .top-navbar .navbar-default {
   border: none;
@@ -537,15 +540,18 @@ h6 {
   margin-top: 15px;
   margin-bottom: 0;
 }
-.room-tabs .room-tabs-checklist li {
+.room-tabs .room-tabs-checklist li,
+.attractions .room-tabs-checklist li {
   border: none;
   padding: 0 0 6px 0;
   font-weight: 600;
 }
-.room-tabs .room-tabs-checklist li:last-of-type {
+.room-tabs .room-tabs-checklist li:last-of-type,
+.attractions .room-tabs-checklist li:last-of-type {
   padding-bottom: 0;
 }
-.room-tabs .room-tabs-checklist li i {
+.room-tabs .room-tabs-checklist li i,
+.attractions .room-tabs-checklist li i {
   color: #de2e5b;
   font-size: 18px;
   float: left;
@@ -1149,7 +1155,7 @@ h6 {
 .services .service .service-icon {
   width: 60px;
   height: 60px;
-  margin: -20px auto 0 auto;
+  margin: -10px auto 0 auto;
   border: 2px solid #de2e5b;
   border-radius: 31px;
   text-align: center;
@@ -1771,6 +1777,10 @@ footer:after {
   body {
     line-height: 23px;
   }
+  .top-navbar .navbar-brand {
+      font-size:3em;
+      margin-top:0;
+  }
   /* 4. Top Navbar 1200px
   -------------------------------------*/
   .top-navbar .navbar-default .navbar-nav a {
@@ -2206,6 +2216,7 @@ footer:after {
   .top-navbar .navbar-brand {
     margin-top: 5px;
     margin-left: -10px;
+    font-size:2em;
   }
   .top-navbar .navbar-default .navbar-collapse {
     border: none;
