@@ -2506,15 +2506,22 @@ footer:after {
   /* 5. Teaser Slider 768px
   -------------------------------------*/
   .teaser-slider .item {
-    height: 430px;
+    height: 146px;
+    margin-top: 100px;
   }
   .teaser-slider-ph {
-    height: 425px;
+    height: 246px;
+  }
+  .teaser-slider .carousel-control {
+    top:70%;
   }
   /* 7. Features 768px
   -------------------------------------*/
   .features h2 {
     font-size: 28px;
+  }
+  .features {
+    padding-top: 70px;
   }
   /* 8. Room Tabs 768px
   -------------------------------------*/
